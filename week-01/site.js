@@ -31,6 +31,10 @@ var members = document.getElementById('members');
 // function:
 var target;
 
+
+var ran = false;
+
+
 // Listen for a click event on #members, rather than adding a click handler to each and every
 // <a> element. This is called event bubbling:
 members.addEventListener('click', function(e) {
@@ -55,7 +59,10 @@ members.addEventListener('click', function(e) {
 
     // TODO: Somehow isolate the last chunk of the GitHub profile URL, which contains the username
     // https://github.com/<username>. The full URL is a string at `e.target.href`:
-    username = '';
+
+    // Chris: By using the substring function we can isolate the part after github.com
+    //allowing it to be whatever length
+    username = e.target.href.substring(19);
 
     // Diagnostic: log the username value
     console.log('Username value:', username);
@@ -73,7 +80,7 @@ members.addEventListener('click', function(e) {
 
     // This block commented with stars so you can get things above working first:
 
-    /*
+
     fetch(request_url)
       .then(function(data) {
         // Parse the returned data as JSON:
@@ -81,12 +88,50 @@ members.addEventListener('click', function(e) {
       })
       .then(function(profile_json) {
         // Diagnostic; output the login value
-        console.log('Login', profile_json.login);
+        console.log('Login', profile_json.login)
+
+
+        //Grabbing all the aspects of json that we want to display
+        if(profile_json.name != null) name = profile_json.name;
+        else var name = profile_json.login;
+        var avatar = profile_json.avatar_url;
+        var repos = profile_json.public_repos;
+
+        if(!ran){
+          //getting template ready to append
+          var templateArea = document.querySelector("#member");
+          var profile = document.querySelector("#profile");
+
+          var clone = document.importNode(templateArea.content,true);
+
+          //adjusting values of the fields
+          var givenName = clone.querySelector("#name");
+          givenName.textContent = name; //name being the json name retrieved / Login
+          var givenAvatar = clone.querySelector("#avatar_url");
+          givenAvatar.src = avatar;
+          var givenRepos = clone.querySelector("#public_repos");
+          givenRepos.textContent = repos;
+
+          //appending the template to the blockquote
+          profile.appendChild(clone);
+          ran = true;
+        }
+        else{
+          var profile = document.querySelector("#profile");
+
+          //adjusting values of the fields
+          var givenName = profile.querySelector("#name");
+          givenName.textContent = name; //name being the json name retrieved / Login
+          var givenAvatar = profile.querySelector("#avatar_url");
+          givenAvatar.src = avatar;
+          var givenRepos = profile.querySelector("#public_repos");
+          givenRepos.textContent = repos;          
+        }
+
 
         // TODO: Insert the parts of the JSON data we want in the `template` HTML and
         // append it to the profile `<blockquote id="profile">`
         // TODO: Display the username (`login`) in case a team member has not set a profile name
       });
-    */
   }
 });
