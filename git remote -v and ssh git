@@ -1,0 +1,12 @@
+[root@localhost weekly-problems]# git remote -v
+instructor	https://github.com/2018-summer-apis/weekly-problems (fetch)
+instructor	https://github.com/2018-summer-apis/weekly-problems (push)
+origin	git@github.com:csiegfri/weekly-problems.git (fetch)
+origin	git@github.com:csiegfri/weekly-problems.git (push)
+
+
+[root@localhost weekly-problems]# ssh git@github.com
+Enter passphrase for key '/root/.ssh/id_rsa': 
+PTY allocation request failed on channel 0
+Hi csiegfri! You've successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
