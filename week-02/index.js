@@ -14,19 +14,25 @@ const options = {
   headers: {
     'User-Agent': 'Request-Promise'
   },
-  json: true;
+  json: true
 
 };
 
 req(options)
-  .then(
-    // TODO: Handle the returned JSON data and write it to a file called
-    // `response.json` in your `week-two/` directory
-    var obj = {
+  .then(function(profile_json){
 
-    }
-    console.log(options)
-  )
+      // TODO: Handle the returned JSON data and write it to a file called
+      // `response.json` in your `week-two/` directory
+
+      console.log(profile_json);
+      var json = JSON.stringify(profile_json);
+      fs.writeFile('response.json', json, (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+      });
+
+  })
+
   .catch(function(err) {
     console.log(err);
   });
