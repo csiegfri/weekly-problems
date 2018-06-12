@@ -13,16 +13,29 @@ const options = {
 
 };
 
-requ(options)
-  .then(function(profile_json){
-    var jlogin = JSON.stringify(profile_json.login);
-    var jid = JSON.stringify(profile_json.id);
-    var javatar = JSON.stringify(profile_json.avatar_url);
-    var jhtml_url = JSON.stringify(profile_json.html_url);
-    var jname = JSON.stringify(profile_json.name);
-    var jbio = JSON.stringify(profile_json.bio);
-    var jupdated_at = JSON.stringify(profile_json.updated_at);
-);
+var jlogin;
+var jid;
+var javatar;
+var jhtml_url;
+var jname;
+var jbio;
+var jupdated_at;
+
+router.get('/', function(req, res, next){
+  requ(options)
+    .then(function(profile_json){
+      jlogin = JSON.stringify(profile_json.login);
+      jid = JSON.stringify(profile_json.id);
+      javatar = JSON.stringify(profile_json.avatar_url);
+      jhtml_url = JSON.stringify(profile_json.html_url);
+      jname = JSON.stringify(profile_json.name);
+      jbio = JSON.stringify(profile_json.bio);
+      jupdated_at = JSON.stringify(profile_json.updated_at);
+  });
+  console.log(jlogin);
+  next();
+});
+
 
 
 /* GET home page. */
