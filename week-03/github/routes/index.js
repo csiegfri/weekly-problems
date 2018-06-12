@@ -28,12 +28,14 @@ requ(options)
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'Index'
-
-
-
-
-  });
+    title: 'Index',
+    log: jlogin,
+    id: jid,
+    ava: javatar,
+    html: jhtml_url,
+    name: jname,
+    bio: jbio,
+    update: jupdated_at });
 });
 
 module.exports = router;
