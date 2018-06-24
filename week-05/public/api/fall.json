@@ -1,0 +1,53 @@
+{
+  "metadata":{
+    "semester":"Fall 2018",
+    "update":"June 24, 2018"
+  },
+  "courses":[
+    {
+      "crn":"000001",
+      "depart":"ITMD",
+      "section":"864-01",
+      "name":"Making up APIs",
+      "location":"SB 104",
+      "days":[
+        "Mon","Wed"
+      ],
+      "start":"1:50 PM",
+      "end":"3:10 PM",
+      "credits":"3 hours",
+      "instructor":"Mister Guy",
+      "email":"mguy@iit.edu"
+    },
+    {
+      "crn":"000324",
+      "depart":"PSYCH",
+      "section":"633-02",
+      "name":"Understanding people who make APIs",
+      "location":"LS 201",
+      "days":[
+        "Mon"
+      ],
+      "start":"6:00 PM",
+      "end":"9:00 PM",
+      "credits":"3 hours",
+      "instructor":"Miss Lady",
+      "email":"mlady@iit.edu"
+    },
+    {
+      "crn":"123005",
+      "depart":"ITM",
+      "section":"100-01",
+      "name":"Intro to Opensource OS",
+      "location":"SE 2033",
+      "days":[
+        "Tue","Thu"
+      ],
+      "start":"11:25 PM",
+      "end":"12:40 PM",
+      "credits":"3 hours",
+      "instructor":"Sean Durkin",
+      "email":"sdurkin@iit.edu"
+    }
+  ]
+}

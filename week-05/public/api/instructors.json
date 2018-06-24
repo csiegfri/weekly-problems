@@ -1,0 +1,56 @@
+{
+  "metadata":{
+    "update":"June 24, 2018",
+    "semesters":[
+      "fall",
+      "summer"
+    ]
+  },
+  "instructors":[
+    {
+      "name":"James Papademas",
+      "courses":[
+        "33632"
+      ],
+      "email":"jpapa@iit.edu",
+      "office":"SB ???",
+      "phone":"xxx-xxx-xxxx"
+    },
+    {
+      "name":"Witt Hawkins",
+      "courses":[
+        "33982"
+      ],
+      "email":"whawk@iit.edu",
+      "office":"SE ???",
+      "phone":"xxx-xxx-xxxx"
+    },
+    {
+      "name":"Miss Lady",
+      "courses":[
+        "000324"
+      ],
+      "email":"mlady@iit.edu",
+      "office":"LS 214",
+      "phone":"xxx-xxx-xxxx"
+    },
+    {
+      "name":"Miss Lady",
+      "courses":[
+        "000324"
+      ],
+      "email":"mlady@iit.edu",
+      "office":"LS 214",
+      "phone":"xxx-xxx-xxxx"
+    },
+    {
+      "name":"Mister Guy",
+      "courses":[
+        "000001"
+      ],
+      "email":"mguy@iit.edu",
+      "office":"SE 2031",
+      "phone":"xxx-xxx-xxxx"
+    },
+  ]
+}

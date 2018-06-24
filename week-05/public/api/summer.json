@@ -1,0 +1,48 @@
+{
+  "metadata":{
+    "semester":"Summer 2018",
+    "update":"June 24, 2018"
+  },
+  "courses":[
+    {
+      "crn":"33632",
+      "depart":"ITMD",
+      "section":"413-02",
+      "name":"Open-Source Programming",
+      "location":"Internet",
+      "start":"04-JUN-18",
+      "end":"28-JUL-18",
+      "instructor":"Papademas, James"
+    },
+    {
+      "crn":"33982",
+      "depart":"ITMD",
+      "section":"419-02",
+      "name":"Intro to Angular JS",
+      "location":"Internet",
+      "start":"04-JUN-18",
+      "end":"28-JUL-18",
+      "instructor":"Hawkins, Witt"
+    },
+    {
+      "crn":"33984",
+      "depart":"ITMD",
+      "section":"469-02",
+      "name":"Behavioral Design",
+      "location":"Internet",
+      "start":"21-MAY-18",
+      "end":"30-JUN-18",
+      "instructor":"Krieglstein, Daniel"
+    },
+    {
+      "crn":"33985",
+      "depart":"ITMD",
+      "section":"469-04",
+      "name":"Data APIs",
+      "location":"Internet",
+      "start":"21-MAY-18",
+      "end":"30-JUN-18",
+      "instructor":"Strolley, Karl"
+    }
+  ]
+}
