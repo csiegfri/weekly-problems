@@ -3,15 +3,12 @@ let router = express.Router();
 let app = express();
 
 
-
+app.use(express.static('public'));
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: "hi" });
+  res.render('index', { title: "Week 5" });
 });
 
-router.get('/fall',function(req, res){
-  app.get("../public/api/fall.json")
-});
 
 module.exports = router;
