@@ -1,15 +1,17 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
+let app = express();
 
-let fall = null;
+
+
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  fetch('/public/api/fall.json')
-    .then(response => response.json())
-    .then(responseJSON => fall);
-  let example = fall.metadata.semester;
-  res.render('index', { title: example });
+router.get('/', function(req, res) {
+  res.render('index', { title: "hi" });
+});
+
+router.get('/fall',function(req, res){
+  app.get("../public/api/fall.json")
 });
 
 module.exports = router;
